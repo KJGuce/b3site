@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "public": true,
+  "buildCommand": "next build",
+  "outputDirectory": ".next"
+}

@@ -2,26 +2,26 @@ import React from "react";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-gradient-to-b from-white to-gray-100">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 sm:p-24 bg-gradient-to-b from-white to-gray-100">
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-6xl font-bold text-gray-900 mb-6">
+        <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
           B3 Connect Group
         </h1>
-        <p className="text-xl text-gray-600 mb-8">
+        <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8">
           Building Better Business through strategic connections and innovative
           solutions.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 mt-8 sm:mt-12">
+          <div className="p-4 sm:p-6 bg-white rounded-lg shadow-md">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">
               Our Mission
             </h2>
             <p className="text-gray-600">
               Connecting businesses with opportunities for growth and success.
             </p>
           </div>
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          <div className="p-4 sm:p-6 bg-white rounded-lg shadow-md">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">
               Our Vision
             </h2>
             <p className="text-gray-600">
@@ -29,8 +29,8 @@ export default function Home() {
               growth.
             </p>
           </div>
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          <div className="p-4 sm:p-6 bg-white rounded-lg shadow-md">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">
               Our Values
             </h2>
             <p className="text-gray-600">
