@@ -1,3 +1,101 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #7c3aed;
+  --accent: #f59e0b;
+  --background: #f8fafc;
+  --text: #1e293b;
+  --text-light: #64748b;
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-blue-50 to-white min-h-screen;
+  }
+
+  h1 {
+    @apply text-2xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800;
+  }
+
+  h2 {
+    @apply text-xl sm:text-2xl font-semibold text-gray-800;
+  }
+
+  h3 {
+    @apply text-lg sm:text-xl font-bold text-gray-800;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white 
+           hover:from-blue-600 hover:to-blue-700 transition-all duration-200 
+           shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-lg bg-white text-gray-700 border border-gray-200
+           hover:bg-gray-50 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md 
+           transition-all duration-200 p-4 sm:p-6 hover:border-blue-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-500 
+           focus:ring-2 focus:ring-blue-200 transition-all duration-200;
+  }
+
+  .badge {
+    @apply text-xs sm:text-sm font-medium text-white bg-gradient-to-r 
+           from-blue-500 to-blue-600 px-3 py-1 rounded-full inline-block;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-blue-600 transition-colors duration-200;
+  }
+
+  .nav-link-active {
+    @apply text-blue-600 font-medium;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
