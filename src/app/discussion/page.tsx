@@ -1,54 +1,70 @@
+"use client";
+
 import React from "react";
 
-export default function DiscussionBoard() {
+export default function Discussion() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-4xl font-bold text-black mb-8">Discussion Board</h1>
-
-      <div className="bg-white border border-gray-200 p-8 mb-6">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-semibold text-black">
-            Recent Discussions
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 sm:p-12 bg-white">
+      <div className="max-w-2xl w-full mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-bold text-black mb-4 text-center">
+          Group Chat
+        </h1>
+        <p className="text-gray-700 text-center mb-8">
+          This is a safe space to share thoughts, questions, and encouragement
+          as we journey together in faith, friendship, and brunch! Feel free to
+          start a conversation or join in.
+        </p>
+        <section className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
+          <h2 className="text-xl font-semibold text-black mb-4">
+            Start a New Discussion
           </h2>
-          <button className="bg-black text-white px-6 py-3 hover:bg-gray-800 transition-colors font-medium">
-            New Discussion
-          </button>
-        </div>
-
-        <div className="space-y-6">
-          <div className="border-b border-gray-200 pb-6">
-            <h3 className="text-xl font-medium text-black">
-              Business Networking Event
-            </h3>
-            <p className="text-gray-600 mt-2">
-              Join us for our monthly networking event at the community center.
-            </p>
-            <div className="mt-3 text-sm text-gray-500 flex items-center space-x-4">
-              <span>Posted by John Doe</span>
-              <span>•</span>
-              <span>2 hours ago</span>
-              <span>•</span>
-              <span className="text-black">5 replies</span>
+          <form className="space-y-4">
+            <input
+              type="text"
+              placeholder="Title or topic..."
+              className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-black"
+            />
+            <textarea
+              placeholder="What's on your mind?"
+              className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-black"
+              rows={3}
+            />
+            <button
+              type="submit"
+              className="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition"
+            >
+              Post
+            </button>
+          </form>
+        </section>
+        <section>
+          <h2 className="text-lg font-semibold text-black mb-4">
+            Recent Conversations
+          </h2>
+          <div className="space-y-6">
+            {/* Example discussion item */}
+            <div className="border-b border-gray-100 pb-4">
+              <h3 className="text-base font-bold text-black mb-1">
+                What's your go-to brunch dish?
+              </h3>
+              <p className="text-gray-700 mb-2">
+                Let's share our favorite brunch recipes or places in Brampton!
+              </p>
+              <span className="text-xs text-gray-400">2 replies</span>
+            </div>
+            <div className="border-b border-gray-100 pb-4">
+              <h3 className="text-base font-bold text-black mb-1">
+                How can we pray for you this week?
+              </h3>
+              <p className="text-gray-700 mb-2">
+                Share any needs or praise reports—let's support each other in
+                prayer.
+              </p>
+              <span className="text-xs text-gray-400">3 replies</span>
             </div>
           </div>
-
-          <div className="border-b border-gray-200 pb-6">
-            <h3 className="text-xl font-medium text-black">
-              Marketing Strategy Discussion
-            </h3>
-            <p className="text-gray-600 mt-2">
-              Let's discuss effective marketing strategies for small businesses.
-            </p>
-            <div className="mt-3 text-sm text-gray-500 flex items-center space-x-4">
-              <span>Posted by Jane Smith</span>
-              <span>•</span>
-              <span>1 day ago</span>
-              <span>•</span>
-              <span className="text-black">12 replies</span>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
   );
 }
